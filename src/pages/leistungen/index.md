@@ -1,14 +1,13 @@
 ---
-templateKey: 'product-page'
-path: /products
-title: Our Coffee
+templateKey: "product-page"
+path: /leistungen
+title: Klima, Lüftung, Sanitär & Heizung
 image: /img/jumbotron.jpg
-heading: Great coffee with a conscience
+heading: Klima, Lüftung, Sanitär & Heizung
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  Berger Haustechnik ist seit über 100 Jahren ihr vertrauensvoller und zuverlässiger Partner in der Region. 
+  Wir stehen Ihnen mit großem Erfahrungsschatz, etlichen zufriedenen Kunden und stets höchster Qualität zur Seite.
+
 intro:
   blurbs:
     - image: /img/coffee.png
@@ -83,19 +82,19 @@ pricing:
         - Green or roasted beans"
         - One or two varieties of beans"
       plan: Small
-      price: '50'
-    - description: 'Great for avid drinkers, java-loving couples and bigger crowds'
+      price: "50"
+    - description: "Great for avid drinkers, java-loving couples and bigger crowds"
       items:
         - 6 lbs of coffee per month
         - Green or roasted beans
         - Up to 4 different varieties of beans
       plan: Big
-      price: '80'
+      price: "80"
     - description: Want a few tiny batches from different varieties? Try our custom plan
       items:
         - Whatever you need
         - Green or roasted beans
         - Unlimited varieties
       plan: Custom
-      price: '??'
+      price: "??"
 ---

@@ -1,17 +1,88 @@
 @import "~bulma/sass/utilities/initial-variables"
+@import "~bulma/sass/utilities/functions.sass"
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap')
+
+$family-serif: "Montserrat", serif;
+$family-primary: $family-serif;
 
 // Config vars
 // Kaldi logo brand color: #FD461E
-$kaldi-red: #D64000
-$kaldi-red-invert: #fff
 
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
+
+$primary: #c9d75a
+$secondary: #cd0000
 $body-color: #333
 $black: #2b2523
 
+h1  
+  font-size: 2em !important
+  font-weight: 600 !important
+  line-height: 2 !important
+h2  
+  font-size: 1.8em !important
+  line-height: 2 !important
+  font-weight: 600 !important 
+h3
+  font-size: 1.6em !important
+
+  font-weight: 400 !important
+h4 
+  font-size: 1.4em !important
+  line-height: 1.5 
+h5
+  font-size: 1.2em
+  line-height: 1.5
+h6
+  font-size: 1em
+  line-height: 1.5
+
+
+.bl 
+  color: #fff !important
+  background-color: #000 !important
+  box-shadow: 0 0 4px 2px #f2f2f2 !important
+  -webkit-box--shadow: 0 0 4px 2px #f2f2f2 !important
+  
+.bl:hover  
+    background-color: #fff !important
+    color: #000 !important
+
+.wh
+  color: #000 !important
+  background-color: #fff !important
+  box-shadow: 0 0 4px 2px #0d0d0d !important
+  -webkit-box--shadow: 0 0 4px 2px #0d0d0d !important
+
+.wh:hover  
+    background-color: #000 !important
+    color: #fff !important
+
+
+a 
+  transition: all 250ms ease-in-out
+
+a:hover
+  transform: translateY(-5px)
+  color: $secondary !important
+
+
+.rd
+  background-color: $secondary !important
+  transition: all 250ms ease-in-out
+
+.rd:hover
+  background-color: white !important
+  color: $secondary !important
+  box-shadow: 0 0 4px 2px #f2f2f2 !important
+  -webkit-box--shadow: 0 0 4px 2px #f2f2f2 !important
+  transform: translateY(-5px)
+  color: $secondary !important
+
+
 .navbar .navbar-menu
   box-shadow:none !important
+
+
 
 .content .taglist
   list-style: none
@@ -82,15 +153,15 @@ $black: #2b2523
   padding: 0 1rem
 footer.footer
   padding: 3rem 0rem 0rem
-  background-color: transparent
+  background-color: #191919 !important
 
 //Menu overrides
 $menu-item-color: $white-ter
 $menu-item-hover-color: $black !important
 $menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
+$menu-item-active-color: $primary
+$menu-item-active-background-color:	$secondary
+$menu-list-border-left: 1px solid $secondary
 $menu-label-color: $white-ter
 
 
