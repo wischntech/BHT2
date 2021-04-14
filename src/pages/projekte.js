@@ -16,7 +16,7 @@ export default class ProjektePage extends React.Component {
 									padding: "1rem",
 								}}
 							>
-								Stellenausschreibungen
+								Referenzen
 							</h1>
 							<p className='has-text-centered'>
 								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit

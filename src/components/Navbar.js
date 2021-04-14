@@ -67,20 +67,71 @@ const Navbar = class extends React.Component {
 						id='navMenu'
 						className={`navbar-menu ${this.state.navBarActiveClass}`}
 					>
-						<div
-							className='navbar-end has-text-centered '
-							aria-label='main navigation'
-							id='navi'
-						>
-							<Link className='navbar-item' to='/leistungen'>
-								Leistungen
-							</Link>
-							<Link className='navbar-item' to='/ueberuns'>
-								Über Uns
-							</Link>
-							<Link className='navbar-item' to='/kontakt'>
-								Kontakt
-							</Link>
+						<div className='navbar-end ' aria-label='main navigation' id='navi'>
+							<div className='navbar-item has-dropdown is-hoverable'>
+								<Link className='navbar-link' to='/leistungen'>
+									Zusammenarbeit
+								</Link>
+								<div className='navbar-dropdown is-boxed'>
+									<Link className='navbar-item' to='/kontakt'>
+										Sie brauchen uns - Kontaktmöglichkeiten
+									</Link>
+									<Link className='navbar-item' to='/stellenausschreibungen'>
+										Wir brauchen Sie - Stellenausschreibungen
+									</Link>
+								</div>
+							</div>
+
+							<div className='navbar-item has-dropdown is-hoverable'>
+								<Link className='navbar-link' to='/leistungen'>
+									Leistungen
+								</Link>
+								<div className='navbar-dropdown is-boxed'>
+									<Link className='navbar-item' to='/leistungen/heizung'>
+										Heizung
+									</Link>
+									<Link className='navbar-item' to='/leistungen/sanitaer'>
+										Sanitär
+									</Link>
+									<Link className='navbar-item' to='/leistungen/lueftung'>
+										Lüftung
+									</Link>
+									<Link className='navbar-item' to='/leistungen/kaelte'>
+										Kälte
+									</Link>
+									<Link className='navbar-item' to='/leistungen/klima'>
+										Klima
+									</Link>
+									<Link className='navbar-item' to='/leistungen/sonstige'>
+										Sonstige Installationen
+									</Link>
+
+									<hr className='navbar-divider' />
+									<Link className='navbar-item' to='/leistungen'>
+										Übersicht
+									</Link>
+								</div>
+							</div>
+
+							<div className='navbar-item has-dropdown is-hoverable'>
+								<Link className='navbar-link' to=''>
+									Informationen
+								</Link>
+								<div className='navbar-dropdown is-boxed'>
+									<Link className='navbar-item' to='/ueberuns'>
+										Wir über uns
+									</Link>
+									<Link className='navbar-item' to='/projekte'>
+										Worauf wir stolz sind - Referenzen.
+									</Link>
+									<Link className='navbar-item' to='/impressum'>
+										Impressum
+									</Link>
+									<Link className='navbar-item' to='/datenschutz'>
+										Datenschutz
+									</Link>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

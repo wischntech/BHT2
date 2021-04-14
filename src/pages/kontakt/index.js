@@ -8,6 +8,8 @@ import mail from "../../img/startseite/mail.svg";
 import post from "../../img/startseite/post.svg";
 import strich from "../../img/startseite/strich_kontakt.svg";
 import telefon from "../../img/startseite/telefon.svg";
+import Roll from "react-reveal/Roll";
+import Fade from "react-reveal/Fade";
 
 function encode(data) {
 	return Object.keys(data)
@@ -45,23 +47,29 @@ export default class Index extends React.Component {
 			<Layout>
 				<section className='section'>
 					<div className='container'>
-						<h1 className='has-text-centered' style={{ paddingBottom: "2em" }}>
-							Kontakt
-						</h1>
-						<p style={{ paddingBottom: "4em" }}>
-							Wenn Sie im Raum Sachsen auf der Suche nach kompetenter
-							Unterstützung im Bereich der Haustechnik sind, bei denen keine
-							sofortige Hilfe durch einen Notdienst von Nöten ist, empfehlen wir
-							Ihnen die Nutzung unseres Kontaktformulars. Hier können Sie uns
-							auf unkomplizierte Art und Weise Ihre Kontaktdaten und weitere
-							Informationen zu Ihrer Anfrage mitteilen. Insbesondere wenn es
-							sich um einen Terminwunsch für Arbeiten, ein Beratungsgespräch zu
-							Planungen und Wünschen im Sanitär-, Heizung-, Kältetechnik- &amp;
-							Lüftungsbereich im Raum Leipzig oder einfach nur eine Frage
-							handelt: Wir werden Ihre Anfrage schnellstmöglich bearbeiten und
-							uns dann umgehend bei Ihnen melden. Selbstverständlich werden all
-							Ihre Daten vertraulich behandelt.
-						</p>
+						<Fade duration={1500}>
+							<h1
+								className='has-text-centered'
+								style={{ paddingBottom: "2em" }}
+							>
+								Kontakt
+							</h1>
+							<p style={{ paddingBottom: "4em" }}>
+								Wenn Sie im Raum Sachsen auf der Suche nach kompetenter
+								Unterstützung im Bereich der Haustechnik sind, bei denen keine
+								sofortige Hilfe durch einen Notdienst von Nöten ist, empfehlen
+								wir Ihnen die Nutzung unseres Kontaktformulars. Hier können Sie
+								uns auf unkomplizierte Art und Weise Ihre Kontaktdaten und
+								weitere Informationen zu Ihrer Anfrage mitteilen. Insbesondere
+								wenn es sich um einen Terminwunsch für Arbeiten, ein
+								Beratungsgespräch zu Planungen und Wünschen im Sanitär-,
+								Heizung-, Kältetechnik- &amp; Lüftungsbereich im Raum Leipzig
+								oder einfach nur eine Frage handelt: Wir werden Ihre Anfrage
+								schnellstmöglich bearbeiten und uns dann umgehend bei Ihnen
+								melden. Selbstverständlich werden all Ihre Daten vertraulich
+								behandelt.
+							</p>
+						</Fade>
 						<hr
 							style={{
 								border: "#cd0000 solid 1px",
@@ -94,14 +102,16 @@ export default class Index extends React.Component {
 														paddingBottom: "1em",
 													}}
 												>
-													<a href='tel:+493438551287'>
-														<img
-															src={telefon}
-															alt='Telefonnummer'
-															width='80%'
-															height='80%'
-														/>
-													</a>
+													<Roll duration={1500}>
+														<a href='tel:+493438551287'>
+															<img
+																src={telefon}
+																alt='Telefonnummer'
+																width='80%'
+																height='80%'
+															/>
+														</a>
+													</Roll>
 												</button>
 											</div>
 											<div
@@ -133,14 +143,16 @@ export default class Index extends React.Component {
 														paddingBottom: "1em",
 													}}
 												>
-													<a href='tel:+493438551504'>
-														<img
-															src={handy}
-															alt='Handynummer'
-															width='80%'
-															height='80%'
-														/>
-													</a>
+													<Roll duration={1500}>
+														<a href='tel:+493438551504'>
+															<img
+																src={handy}
+																alt='Handynummer'
+																width='80%'
+																height='80%'
+															/>
+														</a>
+													</Roll>
 												</button>
 											</div>
 											<div
@@ -173,12 +185,14 @@ export default class Index extends React.Component {
 													}}
 												>
 													{/* <a href='tel:+493438551287'> */}
-													<img
-														src={post}
-														alt='Postadresse'
-														width='80%'
-														height='80%'
-													/>
+													<Roll duration={1500}>
+														<img
+															src={post}
+															alt='Postadresse'
+															width='80%'
+															height='80%'
+														/>
+													</Roll>
 													{/* </a> */}
 												</button>
 											</div>
@@ -227,14 +241,16 @@ export default class Index extends React.Component {
 														paddingBottom: "1em",
 													}}
 												>
-													<a href='mailto:bht@bergerht.de'>
-														<img
-															src={mail}
-															alt='Mailadresse'
-															width='80%'
-															height='80%'
-														/>
-													</a>
+													<Roll duration={1500}>
+														<a href='mailto:bht@bergerht.de'>
+															<img
+																src={mail}
+																alt='Mailadresse'
+																width='80%'
+																height='80%'
+															/>
+														</a>
+													</Roll>
 												</button>
 											</div>
 											<div
@@ -267,14 +283,16 @@ export default class Index extends React.Component {
 														paddingBottom: "1em",
 													}}
 												>
-													<a href='fax:+493438551484'>
-														<img
-															src={fax}
-															alt='Faxadresse'
-															width='80%'
-															height='80%'
-														/>
-													</a>
+													<Roll duration={1500}>
+														<a href='fax:+493438551484'>
+															<img
+																src={fax}
+																alt='Faxadresse'
+																width='80%'
+																height='80%'
+															/>
+														</a>
+													</Roll>
 												</button>
 											</div>
 											<div
@@ -306,14 +324,16 @@ export default class Index extends React.Component {
 														paddingBottom: "1em",
 													}}
 												>
-													{/* <a href=''> */}
-													<img
-														src={adresse}
-														alt='Adresse'
-														width='80%'
-														height='80%'
-													/>
-													{/* </a> */}
+													<Roll duration={1500}>
+														{/* <a href=''> */}
+														<img
+															src={adresse}
+															alt='Adresse'
+															width='80%'
+															height='80%'
+														/>
+														{/* </a> */}
+													</Roll>
 												</button>
 											</div>
 											<div
@@ -411,6 +431,16 @@ export default class Index extends React.Component {
 						</div>
 					</div>
 				</section>
+				<iframe
+					src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2496.871787534325!2d12.885181216134965!3d51.258269979595106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a7090d727bbe6b%3A0xc22fcc9f1b69325d!2sBerger%20Haustechnik%20GmbH!5e0!3m2!1sde!2sde!4v1618328007369!5m2!1sde!2sde'
+					width='100%'
+					height='400'
+					style={{ borderTop: "0" }}
+					allowfullscreen=''
+					loading='lazy'
+					aria-hidden='false'
+					title='GoogleMaps'
+				></iframe>
 			</Layout>
 		);
 	}

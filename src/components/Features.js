@@ -15,7 +15,7 @@ const FeatureGrid = ({ gridItems }) => (
 					<Fade left delay={500} duration={1500}>
 						<section className='section divleistungen'>
 							<PreviewCompatibleImage
-								imageInfo={item}
+								imageInfo={item.img}
 								style={{
 									width: "100px",
 									height: "auto",
@@ -39,7 +39,7 @@ const FeatureGrid = ({ gridItems }) => (
 FeatureGrid.propTypes = {
 	gridItems: PropTypes.arrayOf(
 		PropTypes.shape({
-			image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+			img: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 			text: PropTypes.string,
 		})
 	),
