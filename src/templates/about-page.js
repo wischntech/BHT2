@@ -6,6 +6,7 @@ import Content, { HTMLContent } from "../components/Content";
 import Timelinex from "../components/Timelinex";
 import BlogRollJobs from "../components/BlogRollJobs";
 import Fade from "react-reveal/Fade";
+import wave from "../img/icons/wave1.svg";
 
 export const AboutPageTemplate = ({
 	title,
@@ -20,16 +21,13 @@ export const AboutPageTemplate = ({
 		<section>
 			<div
 				style={{
-					backgroundImage: `url(${
-						back.childImageSharp ? back.childImageSharp.fluid.src : back
-					})`,
+					backgroundImage: `url(${wave})`,
 					backgroundPosition: `right bottom`,
 					backgroundSize: "100%",
 					backgroundRepeat: "no-repeat",
 					position: "relative",
 					zIndex: "4",
-					padding: "5em 0 25%",
-					// height: "30vh",
+					padding: "5% 0 30%",
 				}}
 			>
 				<div className='container' style={{ padding: "0 3%" }}>
@@ -44,17 +42,18 @@ export const AboutPageTemplate = ({
 
 			<div
 				style={{
-					backgroundImage: `url(${
-						back2.childImageSharp ? back2.childImageSharp.fluid.src : back2
-					})`,
-					backgroundPosition: `right top`,
-					backgroundSize: "100%",
-					backgroundPositionY: "-70px",
+					// backgroundImage: `url(${
+					// 	back2.childImageSharp ? back2.childImageSharp.fluid.src : back2
+					// })`,
+					// backgroundPosition: `right top`,
+					// backgroundSize: "100%",
+					// backgroundPositionY: "-70px",
 					backgroundRepeat: "no-repeat",
 					position: "relative",
 					backgroundColor: "black",
 					borderBottom: "20px solid #C9D75A",
 					padding: "20% 0",
+					marginTop: "-10%",
 				}}
 			>
 				<Timelinex />

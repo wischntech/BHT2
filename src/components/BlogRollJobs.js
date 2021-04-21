@@ -9,12 +9,12 @@ class BlogRollJobs extends React.Component {
 		const { edges: posts } = data.allMarkdownRemark;
 
 		return (
-			<div className='columns is-multiline'>
+			<div className='columns is-multiline' style={{ marginBottom: "1%" }}>
 				{posts &&
 					posts.map(({ node: post }) => (
 						<div className='is-parent column is-6' key={post.id}>
 							<article
-								className={`blog-list-item tile is-child box notification ${
+								className={`blog-list-item tile is-child box  ${
 									post.frontmatter.featuredpost ? "is-featured" : ""
 								}`}
 							>
@@ -31,18 +31,18 @@ class BlogRollJobs extends React.Component {
 									) : null}
 									<p className='post-meta'>
 										<Link
-											className='title has-text-primary is-size-4'
+											className='title has-text-primary is-size-5'
 											to={post.fields.slug}
 										>
 											{post.frontmatter.title}
 										</Link>
 										<span> &bull; </span>
-										<span className='subtitle is-size-5 is-block'>
+										<span className='is-size-6 is-block'>
 											{post.frontmatter.date}
 										</span>
 									</p>
 								</header>
-								<p>
+								<p className='' style={{ fontSize: "0.9rem" }}>
 									{post.excerpt}
 									<br />
 									<br />

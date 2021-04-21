@@ -41,7 +41,7 @@ blurbs:
       image: /img/kaelte.png
     text: >
       Kälte
-    url: /leistungen/heizung
+    url: /leistungen/kaelte
   - img:
       alt: Klimasymbol
       image: /img/klima.png

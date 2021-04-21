@@ -53,10 +53,6 @@ heat:
   alt: A close-up of a paper filter filled with ground coffee
   image: /img/heat.png
 
-anlage:
-  alt: A close-up of a paper filter filled with ground coffee
-  image: /img/anlage.png
-
 slogan: Slogan - Bspw Ausbau + Haustechnik – ein Vorteil, den unsere Kunden	besonders schätzen!
 
 main:
@@ -73,6 +69,12 @@ main:
   image3:
     alt: Coffee beans
     image: /img/products-grid1.jpg
+  image4:
+    alt: Coffee beans
+    image: /img/products-grid1.jpg
+  anlage:
+    alt: A close-up of a paper filter filled with ground coffee
+    image: /img/werk.png
 testimonials:
   - author: Elisabeth Kaurismäki
     quote: >-

@@ -217,12 +217,15 @@ export default class Index extends React.Component {
 									</div>
 
 									{/* 2. Spalte  */}
-									<div className='column has-text-centered is-narrow-mobile'>
+									<div
+										className='column has-text-centered is-narrow-mobile'
+										style={{ alignContent: "center", alignItems: "center" }}
+									>
 										<img
 											src={strich}
 											alt='Strichmännchen'
-											width='300px'
-											height='400px'
+											width='100%'
+											height='auto'
 										/>
 									</div>
 
@@ -435,7 +438,7 @@ export default class Index extends React.Component {
 					src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2496.871787534325!2d12.885181216134965!3d51.258269979595106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a7090d727bbe6b%3A0xc22fcc9f1b69325d!2sBerger%20Haustechnik%20GmbH!5e0!3m2!1sde!2sde!4v1618328007369!5m2!1sde!2sde'
 					width='100%'
 					height='400'
-					style={{ borderTop: "0" }}
+					style={{ borderTop: "0", marginBottom: "0" }}
 					allowfullscreen=''
 					loading='lazy'
 					aria-hidden='false'

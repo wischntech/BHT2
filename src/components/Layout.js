@@ -51,9 +51,9 @@ const TemplateWrapper = ({ children }) => {
 			<Navbar />
 			<div>{children}</div>
 			{/* <Footer /> */}
-			<div
+			{/* <div
 				style={{
-					backgroundColor: "#191919",
+					backgroundColor: "#f2f2f2",
 					padding: "2%",
 					alignContent: "center",
 					justifyContent: "center",
@@ -64,7 +64,7 @@ const TemplateWrapper = ({ children }) => {
 					Kundendienstnummer:
 					<span style={{ color: "#cd0000" }}> 034385-51287 </span>
 				</a>
-			</div>
+			</div> */}
 		</div>
 	);
 };

@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
-
+import back1 from "../img/icons/wave1.svg";
+import wave2 from "../img/icons/wavered.svg";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRollProjects from "../components/BlogRollProjects";
@@ -10,10 +11,9 @@ import Fade from "react-reveal/Fade";
 
 export const IndexPageTemplate = ({
 	image,
-	back,
-	back2,
+
 	title,
-	heading,
+
 	mainpitch,
 	description,
 	blurbs,
@@ -21,25 +21,24 @@ export const IndexPageTemplate = ({
 	<div>
 		<div
 			style={{
-				backgroundImage: `url(${
-					back.childImageSharp ? back.childImageSharp.fluid.src : back
-				})`,
+				backgroundImage: `url(${back1})`,
 				backgroundPosition: `bottom right`,
 				backgroundSize: "100%",
 				backgroundRepeat: "no-repeat",
+				marginBottom: "-15%",
+				paddingBottom: "5%",
+				zIndex: "5",
+				position: "relative",
 			}}
 		>
-			<section className='section'>
+			<section className=''>
 				<div
 					className='container'
 					style={{
-						display: "flex",
-						height: "200px",
 						lineHeight: "1",
 						justifyContent: "space-around",
 						alignItems: "left",
 						flexDirection: "column",
-						paddingRight: "15%",
 					}}
 				>
 					<Fade top duration={1500}>
@@ -47,22 +46,14 @@ export const IndexPageTemplate = ({
 							className='has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen'
 							style={{
 								color: "black",
-								lineHeight: "1",
 
-								padding: "100px 0 10px 0",
+								padding: "4% 0 10px 0",
 							}}
 						>
 							{title}
 						</h1>
 
-						<h3
-							className='subtitle'
-							style={{
-								padding: "0 0 10px 0",
-							}}
-						>
-							{mainpitch.description}
-						</h3>
+						<h3 className='subtitle'>{mainpitch.description}</h3>
 					</Fade>
 					<Fade right delay={500} duration={1500}>
 						<div
@@ -85,144 +76,124 @@ export const IndexPageTemplate = ({
 					})`,
 					backgroundPosition: `bottom right`,
 					backgroundPositionX: "75%",
-					backgroundPositionY: "100px",
+					backgroundPositionY: "0%",
 					height: "600px",
 					backgroundRepeat: "no-repeat",
-					zIndex: "2",
+					position: "relative",
+					zIndex: "5",
 				}}
 			></div>
 		</div>
-
-		<div
+		<section
+			className='section'
 			style={{
-				backgroundImage: `url(${
-					back2.childImageSharp ? back2.childImageSharp.fluid.src : back2
-				})`,
-				backgroundPosition: `right top`,
-				backgroundPositionY: "-5px",
-				backgroundSize: "100%",
-				backgroundRepeat: "no-repeat",
-				position: "relative",
 				backgroundColor: "black",
-				borderTop: "10px solid #C9D75A",
+				position: "relative",
+				zIndex: "4",
+
+				paddingBottom: "20%",
 			}}
 		>
-			<section className='section'>
-				<div className='container '>
-					<div className='section'>
-						<div className='columns'>
-							<div
-								className='column is-10 is-offset-1'
-								style={{ color: "white" }}
-							>
+			<div className='container '>
+				<div className='section'>
+					<div className='columns'>
+						<div
+							className='column is-10 is-offset-1'
+							style={{ color: "white" }}
+						>
+							<div className='content'>
 								<div className='content'>
-									<div className='content'>
-										<div className='tile margin-4'>
-											<Fade top duration={1500}>
-												<h2
-													className='has-text-weight-semibold is-size-2'
-													style={{
-														paddingTop: "25%",
-														color: "white",
-													}}
-													id='leistun'
-												>
-													{mainpitch.title}
-												</h2>
-											</Fade>
-										</div>
+									<div className='tile margin-4'>
+										<Fade top duration={1500}>
+											<h2
+												className='has-text-weight-semibold is-size-2'
+												style={{
+													paddingTop: "15%",
+													color: "white",
+													//	marginTop: "-35%",
+												}}
+												id='leistun'
+											>
+												{mainpitch.title}
+											</h2>
+										</Fade>
 									</div>
+								</div>
 
-									<Features gridItems={blurbs} />
+								<Features gridItems={blurbs} />
 
-									<div className='columns'>
-										<div className='column is-12 has-text-centered'>
-											<p>{description}</p>
-										</div>
+								<div className='columns'>
+									<div className='column is-12 has-text-centered'>
+										<p>{description}</p>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</section>
-		</div>
-		<div
-			style={{
-				backgroundImage: `url(${
-					back.childImageSharp ? back.childImageSharp.fluid.src : back
-				})`,
-				backgroundPosition: `right bottom`,
-				backgroundSize: "100%",
-				backgroundRepeat: "no-repeat",
-				position: "relative",
-				backgroundColor: "black",
-				borderBottom: "20px solid #C9D75A",
-			}}
-		>
-			{" "}
+			</div>{" "}
 			<Fade delay={1000} duration={1500}>
 				<div className='has-text-centered'>
-					<Link
-						className='btn wh'
-						to='/kontakt'
-						style={{
-							marginBottom: "30%",
-						}}
-					>
+					<Link className='btn wh' to='/kontakt'>
 						Kontaktieren Sie uns.
 					</Link>
 				</div>
 			</Fade>
-		</div>
+		</section>
 		<div
 			style={{
-				backgroundImage: `url(${
-					back2.childImageSharp ? back2.childImageSharp.fluid.src : back2
-				})`,
-				backgroundPosition: `right top`,
-				backgroundPositionY: "-5px",
-				backgroundSize: "100%",
-				backgroundRepeat: "no-repeat",
 				position: "relative",
-				backgroundColor: "white",
-				borderTop: "10px solid #C9D75A",
-				height: "300px",
+
+				backgroundImage: `url(${wave2})`,
+				backgroundPosition: `top right`,
+				backgroundSize: "100%",
+				height: "500px",
+				backgroundRepeat: "no-repeat",
+				margin: "-9% 0 0 0",
+				zIndex: "15",
 			}}
 		></div>
 		<section className='section'>
-			<div className='container'>
+			<div className='container' style={{}}>
 				<Fade top duration={1500}>
 					<h2
 						className='has-text-centered has-text-weight-semibold is-size-2'
-						style={{ padding: "20px 0 50px 0" }}
+						style={{
+							padding: "20px 0 50px 0",
+							marginTop: "-5%",
+							// zIndex: "15",
+						}}
 					>
 						Neuigkeiten
 					</h2>
 				</Fade>
-				<h3 className='has-text-left has-text-weight-semibold is-size-3'>
-					PROJEKTE
-				</h3>{" "}
-				<br />
-				<BlogRollProjects />
-				<div className='column is-12 has-text-centered'>
-					<Link className='btn bl' to='/projekte'>
-						Alle Projekte
-					</Link>{" "}
-				</div>
+				<Fade duration={1500}>
+					<h3 className='has-text-left has-text-weight-semibold is-size-3'>
+						PROJEKTE
+					</h3>{" "}
+					<br />
+					<BlogRollProjects />
+					<div className='column is-12 has-text-centered'>
+						<Link className='btn bl' to='/projekte'>
+							Alle Projekte
+						</Link>{" "}
+					</div>
+				</Fade>
 				<br /> <br />
 				<hr style={{ color: "#cccccc !important" }} />
 				<br /> <br />
-				<h3 className='has-text-left has-text-weight-semibold is-size-3'>
-					STELLENAUSSCHREIBUNGEN
-				</h3>
-				<br />
-				<BlogRollJobs />
-				<div className='column is-12 has-text-centered'>
-					<Link className='btn bl' to='/stellenausschreibungen'>
-						Alle Stellenausschreibungen
-					</Link>
-				</div>
+				<Fade duration={1500}>
+					<h3 className='has-text-left has-text-weight-semibold is-size-3'>
+						STELLENAUSSCHREIBUNGEN
+					</h3>
+					<br />
+					<BlogRollJobs />
+					<div className='column is-12 has-text-centered'>
+						<Link className='btn bl' to='/stellenausschreibungen'>
+							Alle Stellenausschreibungen
+						</Link>
+					</div>
+				</Fade>
 			</div>
 		</section>
 	</div>

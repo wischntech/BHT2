@@ -1,52 +1,47 @@
 import React from "react";
 import Layout from "../../components/Layout";
-import { StaticQuery, graphql, Link, withPrefix } from "gatsby";
-import BlogRollKaelte from "../../components/BlogRollKaelte";
-import kaeltestrich from "../../img/strich/kaeltekli.svg";
-import kaelteicon from "../../img/icons/kaelte.svg";
-import Img from "gatsby-image";
+import { Link } from "gatsby";
+import BlogRoll from "../../components/BlogRollKaelte";
+import strich from "../../img/strich/kaeltkli.svg";
+import wave from "../../img/icons/waveblue.svg";
+import back from "../../img/icons/wave1.svg";
+import back1 from "../../img/back/industry.jpg";
+import Fade from "react-reveal/Fade";
+import thumbs from "../../img/back/thumbs.jpg";
 
-const KaeltePage = ({}) => {
-	const kaelte = withPrefix("../../img/anlage.png");
-	return (
-		<Layout>
-			<div
-				className='full-width-image-container margin-top-0'
-				style={{
-					backgroundImage: `url(${kaelte})`,
-					backgroundPosition: `top right`,
-					padding: "10% 0",
-				}}
-			>
-				<div
-					style={{
-						backgroundColor: "white",
-						color: "black",
-						padding: "1.5%",
-						textAlign: "center",
+export default () => (
+	<Layout>
+		<div
+			className=''
+			style={{
+				backgroundColor: "#0000ff",
+				padding: "10% 0 20% 0",
+				backgroundImage: `url(${back1})`,
+				backgroundRepeat: "no-repeat",
+				backgroundPosition: `center right`,
+				backgroundSize: "100%",
+				boxShadow: "inset 0px 0px 25px 3px black",
+				position: "relative",
+			}}
+		></div>
 
-						borderRadius: "5px",
-					}}
-				>
-					<img
-						src={kaelteicon}
-						style={{
-							width: "50px",
-							height: "auto",
-							margin: "auto",
-						}}
-						alt='Strichmännchen mit Kältesymbol'
-					/>
-
-					<h1 className='' style={{}}>
-						Kältetechnik
-					</h1>
-				</div>
-			</div>
-			<section className='section'>
-				<div className='container'>
-					<div className='content'>
-						<p>
+		<section
+			className='section'
+			style={{
+				padding: "5% 2% 13% 2%",
+				backgroundImage: `url(${back})`,
+				backgroundRepeat: "no-repeat",
+				backgroundPosition: `bottom right`,
+				backgroundSize: "100%",
+				marginBottom: "-10%",
+				position: "relative",
+			}}
+		>
+			<div className='container'>
+				<div className='content' style={{ textAlign: "left" }}>
+					<Fade bottom duration={1500}>
+						<h2>Kältetechnik </h2>
+						<p style={{ paddingBottom: "3%" }}>
 							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi
 							unde eius labore veritatis sapiente dicta eos doloremque, sequi
 							eaque, molestiae iusto? Enim a officiis atque cupiditate sequi
@@ -60,180 +55,234 @@ const KaeltePage = ({}) => {
 							corporis aut adipisci est labore quidem? Dolore ad ipsam aut ipsum
 							est dolores aliquid harum deserunt eos.
 						</p>
-					</div>
-					<div style={{ paddingBottom: "8%" }}>
-						<img
-							src={kaeltestrich}
-							style={{
-								width: "200px",
-								height: "auto",
-								margin: "15px",
+					</Fade>
+					<Fade bottom duration={1500} delay={500}>
+						<Link
+							className='btn bl is-clickable '
+							to='/kontakt/'
+							style={{ marginLeft: "20%" }}
+						>
+							Kontaktieren Sie uns.
+						</Link>
+					</Fade>
+				</div>
+				<div
+					style={{ paddingBottom: "20%", zIndex: "100", position: "relative" }}
+				>
+					<img
+						src={strich}
+						style={{
+							width: "250px",
+							height: "auto",
+							margin: "15px",
+							// zIndex: "9 !important",
+							float: "right",
+						}}
+						alt='Strichmännchen mit Kältesymbol'
+					/>
+				</div>
+			</div>
+		</section>
 
-								float: "right",
+		<div
+			style={{
+				padding: "5% 0 5%",
+				zIndex: "5",
+				position: "relative",
+				backgroundColor: "#c9d75a",
+			}}
+		>
+			<section>
+				<div className='container'>
+					<Fade duration={1500}>
+						<h2>Leistungsarten</h2>
+					</Fade>
+					<Fade left cascade duration={1500}>
+						<div className='columns is-4'>
+							<div
+								className='column beweg'
+								style={{
+									padding: "2%",
+									margin: "2%",
+
+									borderRadius: "5px",
+								}}
+							>
+								<h4 className='has-text-weight-semibold'>Leistung 1</h4>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Pariatur impedit assumenda recusandae? Obcaecati dolorum unde
+									ab sit maiores nemo nobis quidem. Maiores ab voluptate
+									doloribus delectus. Sequi omnis cum est.
+								</p>
+							</div>
+							<div
+								className='column beweg '
+								style={{
+									padding: "2%",
+									margin: "2%",
+
+									borderRadius: "5px",
+								}}
+							>
+								<h4 className='has-text-weight-bold' style={{}}>
+									Leistung 2
+								</h4>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Pariatur impedit assumenda recusandae? Obcaecati dolorum unde
+									ab sit maiores nemo nobis quidem. Maiores ab voluptate
+									doloribus delectus. Sequi omnis cum est.
+								</p>
+							</div>
+							<div
+								className='column beweg'
+								style={{
+									padding: "2%",
+									margin: "2%",
+
+									borderRadius: "5px",
+								}}
+							>
+								<h4 className='has-text-weight-bold' style={{}}>
+									Leistung 3
+								</h4>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Pariatur impedit assumenda recusandae? Obcaecati dolorum unde
+									ab sit maiores nemo nobis quidem. Maiores ab voluptate
+									doloribus delectus. Sequi omnis cum est.
+								</p>
+							</div>
+						</div>
+						<div className='columns is-4'>
+							<div
+								className='column beweg'
+								style={{
+									padding: "2%",
+									margin: "2%",
+								}}
+							>
+								<h4 className='has-text-weight-bold' style={{}}>
+									Leistung 4
+								</h4>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Pariatur impedit assumenda recusandae? Obcaecati dolorum unde
+									ab sit maiores nemo nobis quidem. Maiores ab voluptate
+									doloribus delectus. Sequi omnis cum est.
+								</p>
+							</div>
+							<div
+								className='column beweg '
+								style={{
+									padding: "2%",
+									margin: "2%",
+								}}
+							>
+								<h4 className='has-text-weight-bold' style={{}}>
+									Leistung 5
+								</h4>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Pariatur impedit assumenda recusandae? Obcaecati dolorum unde
+									ab sit maiores nemo nobis quidem. Maiores ab voluptate
+									doloribus delectus. Sequi omnis cum est.
+								</p>
+							</div>
+							<div
+								className='column beweg'
+								style={{
+									padding: "2%",
+									margin: "2%",
+								}}
+							>
+								<h4 className='has-text-weight-bold' style={{}}>
+									Leistung 6
+								</h4>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Pariatur impedit assumenda recusandae? Obcaecati dolorum unde
+									ab sit maiores nemo nobis quidem. Maiores ab voluptate
+									doloribus delectus. Sequi omnis cum est.
+								</p>
+							</div>
+						</div>
+					</Fade>
+				</div>
+			</section>
+		</div>
+		<section
+			style={{
+				backgroundColor: "black",
+				marginTop: "-15%",
+				padding: "15% 0",
+				zIndex: "2",
+				position: "relative",
+			}}
+		>
+			<div
+				className='container'
+				style={{
+					padding: "5% 2%",
+					color: "#fff",
+				}}
+			>
+				<h3 className='has-bold-text'>Referenzprojekte</h3>
+				<p style={{ paddingBottom: "2%" }}>
+					Haben wir Ihr Interesse geweckt? Dann schauen Sie gerne in unseren
+					Referenzprojekten vorbei.
+				</p>
+
+				<br />
+				<BlogRoll />
+			</div>
+		</section>
+		<Fade bottom duration={1500} delay={500}>
+			<section className='section' style={{ padding: "5%" }}>
+				<div
+					className='columns'
+					style={{
+						margin: "auto",
+						boxShadow: " 0 0 4px 2px #f2f2f2",
+						webkitBoxShadow: "0 0 4px 2px #f2f2f2 !important",
+						padding: "3%",
+						textAlign: "left",
+						backgroundColor: "",
+					}}
+				>
+					<div className='column'>
+						<img
+							src={thumbs}
+							style={{
+								zIndex: "9 !important",
 							}}
 							alt='Strichmännchen mit Kältesymbol'
 						/>
 					</div>
-				</div>
-			</section>
+					<div className='column is-8' style={{}}>
+						<h3
+							className='has-text-weight-bold'
+							style={{ paddingBottom: "1%" }}
+						>
+							Alle Leistungen
+						</h3>
+						<p style={{ paddingBottom: "1%" }}>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+							facere, distinctio culpa temporibus, dolorum perferendis modi
+							numquam praesentium atque libero, minus repellat in similique
+							provident ullam quos hic labore deserunt nobis maxime veritatis!
+							Dicta modi aspernatur inventore perferendis itaque incidunt sit,
+							blanditiis impedit, totam fugit corrupti molestias, beatae harum
+							recusandae.
+						</p>
 
-			<section style={{ backgroundColor: "#c9d75a", padding: "4% 2%" }}>
-				<div style={{ height: "100%", width: "auto" }}></div>
-				<div className='container'>
-					<h2 style={{ padding: "2%" }}>Leistungsarten</h2>
-					<div className='columns is-4'>
-						<div
-							className='column'
-							style={{
-								padding: "2%",
-								margin: "2%",
-								boxShadow: "0 0 4px 2px #bbcd32",
-								WebkitBoxShadow: "0 0 6px 4px #bbcd32",
-								backgroundColor: "#fff",
-								borderRadius: "5px",
-							}}
-						>
-							<h3>Leistung 1</h3>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Pariatur impedit assumenda recusandae? Obcaecati dolorum unde ab
-								sit maiores nemo nobis quidem. Maiores ab voluptate doloribus
-								delectus. Sequi omnis cum est.
-							</p>
-						</div>
-						<div
-							className='column '
-							style={{
-								padding: "2%",
-								margin: "2%",
-								boxShadow: "0 0 4px 2px #bbcd32",
-								WebkitBoxShadow: "0 0 4px 2px #bbcd32",
-								backgroundColor: "#fff",
-								borderRadius: "5px",
-							}}
-						>
-							<h3>Leistung 2</h3>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Pariatur impedit assumenda recusandae? Obcaecati dolorum unde ab
-								sit maiores nemo nobis quidem. Maiores ab voluptate doloribus
-								delectus. Sequi omnis cum est.
-							</p>
-						</div>
-						<div
-							className='column'
-							style={{
-								padding: "2%",
-								margin: "2%",
-								boxShadow: "0 0 4px 2px #bbcd32",
-								WebkitBoxShadow: "0 0 4px 2px #bbcd32",
-								backgroundColor: "#fff",
-								borderRadius: "5px",
-							}}
-						>
-							<h3>Leistung 3</h3>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Pariatur impedit assumenda recusandae? Obcaecati dolorum unde ab
-								sit maiores nemo nobis quidem. Maiores ab voluptate doloribus
-								delectus. Sequi omnis cum est.
-							</p>
-						</div>
-					</div>
-					<div className='columns is-4'>
-						<div
-							className='column'
-							style={{
-								padding: "2%",
-								margin: "2%",
-								boxShadow: "0 0 4px 2px #bbcd32",
-								WebkitBoxShadow: "0 0 4px 2px #bbcd32",
-								backgroundColor: "#fff",
-								borderRadius: "5px",
-							}}
-						>
-							<h3>Leistung 4</h3>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Pariatur impedit assumenda recusandae? Obcaecati dolorum unde ab
-								sit maiores nemo nobis quidem. Maiores ab voluptate doloribus
-								delectus. Sequi omnis cum est.
-							</p>
-						</div>
-						<div
-							className='column '
-							style={{
-								padding: "2%",
-								margin: "2%",
-								boxShadow: "0 0 4px 2px #bbcd32",
-								WebkitBoxShadow: "0 0 4px 2px #bbcd32",
-								backgroundColor: "#fff",
-								borderRadius: "5px",
-							}}
-						>
-							<h3>Leistung 5</h3>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Pariatur impedit assumenda recusandae? Obcaecati dolorum unde ab
-								sit maiores nemo nobis quidem. Maiores ab voluptate doloribus
-								delectus. Sequi omnis cum est.
-							</p>
-						</div>
-						<div
-							className='column'
-							style={{
-								padding: "2%",
-								margin: "2%",
-								boxShadow: "0 0 4px 2px #bbcd32",
-								WebkitBoxShadow: "0 0 4px 2px #bbcd32",
-								backgroundColor: "#fff",
-								borderRadius: "5px",
-							}}
-						>
-							<h3>Leistung 6</h3>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Pariatur impedit assumenda recusandae? Obcaecati dolorum unde ab
-								sit maiores nemo nobis quidem. Maiores ab voluptate doloribus
-								delectus. Sequi omnis cum est.
-							</p>
-						</div>
+						<Link className='btn bl is-clickable' to='/leistungen/'>
+							Übersicht
+						</Link>
 					</div>
 				</div>
 			</section>
-			<section>
-				<div className='container' style={{ padding: "3% 0" }}>
-					<h3 className='has-text-left has-text-weight-semibold is-size-3'>
-						Referenzprojekte
-					</h3>
-					<p>
-						Haben wir Ihr Interesse geweckt? Dann schauen Sie gerne in unseren
-						Referenzprojekten vorbei.
-					</p>
-
-					<br />
-					<BlogRollKaelte />
-				</div>
-			</section>
-		</Layout>
-	);
-};
-
-const kaelteQuery = graphql`
-	query {
-		anlage: file(relativePath: { eq: "anlage.png" }) {
-			childImageSharp {
-				fluid(maxWidth: 2048) {
-					...GatsbyImageSharpFluid
-				}
-			}
-		}
-	}
-`;
-
-export default () => (
-	<StaticQuery
-		query={kaelteQuery}
-		render={(data) => <KaeltePage data={data} />}
-	/>
+		</Fade>
+	</Layout>
 );
