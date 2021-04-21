@@ -11,9 +11,7 @@ import Fade from "react-reveal/Fade";
 
 export const IndexPageTemplate = ({
 	image,
-
 	title,
-
 	mainpitch,
 	description,
 	blurbs,

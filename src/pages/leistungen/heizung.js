@@ -75,7 +75,7 @@ export default () => (
 							width: "250px",
 							height: "auto",
 							margin: "15px",
-							// zIndex: "9 !important",
+
 							float: "right",
 						}}
 						alt='Strichmännchen mit Kältesymbol'
