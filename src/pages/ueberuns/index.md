@@ -2,8 +2,6 @@
 templateKey: "about-page"
 path: /ueberuns
 title: Über uns
-back: /img/greenbot.png
-back2: /img/greentop.png
 ---
 
 ### Wir sind Berger Haustechnik

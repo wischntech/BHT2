@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+
 import logo from "../img/logo.svg";
 import zitat from "../img/zitat.svg";
 import back from "../img/icons/wave1.svg";
@@ -108,63 +108,6 @@ export const ProductPageTemplate = ({
 				</div>
 			</div>
 		</div>
-		{/* <div className='tile is-ancestor'>
-			<div className='tile is-vertical'>
-				<div className='tile'>
-					<div className='tile is-parent is-vertical'>
-						<article className='tile is-child'>
-							<PreviewCompatibleImage imageInfo={main.image1} />
-						</article>
-					</div>
-					<div className='tile is-parent'>
-						<article className='tile is-child'>
-							<PreviewCompatibleImage imageInfo={main.image2} />
-						</article>
-					</div>
-					<div className='tile is-parent'>
-						<article className='tile is-child'>
-							<PreviewCompatibleImage imageInfo={main.anlage} />
-						</article>
-					</div>
-				</div>
-				<div className='tile is-parent'>
-					<article className='tile is-child'>
-						<PreviewCompatibleImage imageInfo={main.image3} />
-					</article>
-				</div>
-			</div>
-		</div>
-		<div className='columns'>
-			<div className='column is-7'>
-				<h3 className=''>{main.heading}</h3>
-				<p>{main.description}</p>
-			</div>
-		</div> */}
-		{/* <div className='' style={{}} />
-
-		<div className='columns is-gapless'>
-			<div className='column '>
-				<div className='container' style={{ padding: "5% 3%" }}>
-					<h3>Heizung</h3>
-					<p>Info zur Leistung </p>
-				</div>
-			</div>
-			<div className='column' style={{ padding: "0 !important" }}>
-				<PreviewCompatibleImage imageInfo={main.image1} />
-			</div>
-		</div>
-		<div className='columns is-gapless'>
-			<div
-				className='column'
-				style={{ padding: "0 0 0 0 !important", paddingTop: "0!important" }}
-			>
-				<PreviewCompatibleImage imageInfo={main.image2} />
-			</div>
-			<div className='column container' style={{ padding: "5% 3%" }}>
-				<h3>Heizung</h3>
-				<p>Info zur Leistung </p>
-			</div>
-		</div> */}
 	</div>
 );
 
@@ -180,9 +123,6 @@ ProductPageTemplate.propTypes = {
 	main: PropTypes.shape({
 		heading: PropTypes.string,
 		description: PropTypes.string,
-		image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-		image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-		image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 	}),
 	pricing: PropTypes.shape({
 		heading: PropTypes.string,
@@ -227,13 +167,10 @@ export const productPageQuery = graphql`
 				slogan
 				description
 				blurbs {
-					img {
-						alt
-						image {
-							childImageSharp {
-								fluid(maxWidth: 240, quality: 64) {
-									...GatsbyImageSharpFluid
-								}
+					image {
+						childImageSharp {
+							fluid(maxWidth: 240, quality: 64) {
+								...GatsbyImageSharpFluid
 							}
 						}
 					}
@@ -243,46 +180,6 @@ export const productPageQuery = graphql`
 				main {
 					heading
 					description
-					image1 {
-						alt
-						image {
-							childImageSharp {
-								fluid(maxWidth: 526, quality: 92) {
-									...GatsbyImageSharpFluid
-								}
-							}
-						}
-					}
-					image2 {
-						alt
-						image {
-							childImageSharp {
-								fluid(maxWidth: 526, quality: 92) {
-									...GatsbyImageSharpFluid
-								}
-							}
-						}
-					}
-					image3 {
-						alt
-						image {
-							childImageSharp {
-								fluid(maxWidth: 1075, quality: 72) {
-									...GatsbyImageSharpFluid
-								}
-							}
-						}
-					}
-					image4 {
-						alt
-						image {
-							childImageSharp {
-								fluid(maxWidth: 1075, quality: 72) {
-									...GatsbyImageSharpFluid
-								}
-							}
-						}
-					}
 				}
 			}
 		}

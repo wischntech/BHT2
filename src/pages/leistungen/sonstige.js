@@ -1,9 +1,6 @@
 import React from "react";
 import Layout from "../../components/Layout";
 import { Link } from "gatsby";
-import BlogRoll from "../../components/BlogRollHeizung";
-import strich from "../../img/strich/heizung.svg";
-import wave from "../../img/icons/waveorange.svg";
 import back from "../../img/icons/wave1.svg";
 import back1 from "../../img/back/heat.jpg";
 import Fade from "react-reveal/Fade";
