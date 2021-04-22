@@ -185,9 +185,7 @@ export const IndexPageTemplate = ({ title, mainpitch, description, intro }) => (
 					</h2>
 				</Fade>
 				<Fade duration={1500}>
-					<h3 className='has-text-left has-text-weight-semibold is-size-3'>
-						PROJEKTE
-					</h3>{" "}
+					<h3 className='has-text-left has-text-weight-semibold'>PROJEKTE</h3>{" "}
 					<br />
 					<BlogRollProjects />
 					<div className='column is-12 has-text-centered'>
@@ -200,9 +198,7 @@ export const IndexPageTemplate = ({ title, mainpitch, description, intro }) => (
 				<hr style={{ color: "#cccccc !important" }} />
 				<br /> <br />
 				<Fade duration={1500}>
-					<h3 className='has-text-left has-text-weight-semibold is-size-3'>
-						STELLENAUSSCHREIBUNGEN
-					</h3>
+					<h3 className='has-text-left has-text-weight-semibold'>JOBS</h3>
 					<br />
 					<BlogRollJobs />
 					<div className='column is-12 has-text-centered'>
