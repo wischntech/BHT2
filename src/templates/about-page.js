@@ -8,13 +8,7 @@ import BlogRollJobs from "../components/BlogRollJobs";
 import Fade from "react-reveal/Fade";
 import wave from "../img/icons/wave1.svg";
 
-export const AboutPageTemplate = ({
-	title,
-	content,
-	back,
-	back2,
-	contentComponent,
-}) => {
+export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 	const PageContent = contentComponent || Content;
 
 	return (
@@ -42,12 +36,6 @@ export const AboutPageTemplate = ({
 
 			<div
 				style={{
-					// backgroundImage: `url(${
-					// 	back2.childImageSharp ? back2.childImageSharp.fluid.src : back2
-					// })`,
-					// backgroundPosition: `right top`,
-					// backgroundSize: "100%",
-					// backgroundPositionY: "-70px",
 					backgroundRepeat: "no-repeat",
 					position: "relative",
 					backgroundColor: "black",
@@ -87,8 +75,6 @@ AboutPageTemplate.propTypes = {
 	title: PropTypes.string.isRequired,
 	content: PropTypes.string,
 	contentComponent: PropTypes.func,
-	back: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-	back2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 };
 
 const AboutPage = ({ data }) => {
@@ -100,8 +86,6 @@ const AboutPage = ({ data }) => {
 				contentComponent={HTMLContent}
 				title={post.frontmatter.title}
 				content={post.html}
-				back={post.frontmatter.back}
-				back2={post.frontmatter.back2}
 			/>
 		</Layout>
 	);
@@ -123,20 +107,6 @@ export const aboutPageQuery = graphql`
 			html
 			frontmatter {
 				title
-				back {
-					childImageSharp {
-						fluid(maxWidth: 3000, quality: 100) {
-							...GatsbyImageSharpFluid
-						}
-					}
-				}
-				back2 {
-					childImageSharp {
-						fluid(maxWidth: 3000, quality: 100) {
-							...GatsbyImageSharpFluid
-						}
-					}
-				}
 			}
 		}
 	}

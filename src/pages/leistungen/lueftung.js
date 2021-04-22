@@ -3,7 +3,6 @@ import Layout from "../../components/Layout";
 import { Link } from "gatsby";
 import BlogRoll from "../../components/BlogRollLueftung";
 import strich from "../../img/strich/lueftung.svg";
-import wave from "../../img/icons/waveblue.svg";
 import back from "../../img/icons/wave1.svg";
 import back1 from "../../img/back/ventilation.jpg";
 import Fade from "react-reveal/Fade";

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import back1 from "../img/icons/wave1.svg";
+import strich from "../img/startseite/startseite.svg";
 import wave2 from "../img/icons/wavered.svg";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
@@ -9,13 +10,7 @@ import BlogRollProjects from "../components/BlogRollProjects";
 import BlogRollJobs from "../components/BlogRollJobs";
 import Fade from "react-reveal/Fade";
 
-export const IndexPageTemplate = ({
-	image,
-	title,
-	mainpitch,
-	description,
-	blurbs,
-}) => (
+export const IndexPageTemplate = ({ title, mainpitch, description, intro }) => (
 	<div>
 		<div
 			style={{
@@ -37,6 +32,7 @@ export const IndexPageTemplate = ({
 						justifyContent: "space-around",
 						alignItems: "left",
 						flexDirection: "column",
+						padding: "4%",
 					}}
 				>
 					<Fade top duration={1500}>
@@ -66,21 +62,34 @@ export const IndexPageTemplate = ({
 				</div>
 			</section>
 			<div
-				title=' Zwei Strichmännchen. Eins ist ein sich fragender Kunde, der Hilfe benötigt. Auf der anderen Seite ein Jonglierender Berger, 
-			der mit allen Leistungen in Form von Bällen jongliert.'
+				// 	title=' Zwei Strichmännchen. Eins ist ein sich fragender Kunde, der Hilfe benötigt. Auf der anderen Seite ein Jonglierender Berger,
+				// der mit allen Leistungen in Form von Bällen jongliert.'
 				style={{
-					backgroundImage: `url(${
-						image.childImageSharp ? image.childImageSharp.fluid.src : image
-					})`,
-					backgroundPosition: `bottom right`,
-					backgroundPositionX: "75%",
-					backgroundPositionY: "0%",
+					// backgroundImage: `url(${
+					// 	image.childImageSharp ? image.childImageSharp.fluid.src : image
+					// })`,
+					// backgroundPosition: `bottom right`,
+					// backgroundPositionX: "75%",
+					// backgroundPositionY: "0%",
 					height: "600px",
-					backgroundRepeat: "no-repeat",
+					// backgroundRepeat: "no-repeat",
 					position: "relative",
 					zIndex: "5",
 				}}
-			></div>
+			>
+				<img
+					src={strich}
+					style={{
+						width: "auto",
+						height: "80%",
+						marginRight: "10vw",
+						zIndex: "9 !important",
+						float: "right",
+					}}
+					alt='Zwei Strichmännchen. Eins ist ein sich fragender Kunde, der Hilfe benötigt. Auf der anderen Seite ein Jonglierender Berger, 
+			der mit allen Leistungen in Form von Bällen jongliert.'
+				/>
+			</div>
 		</div>
 		<section
 			className='section'
@@ -118,7 +127,7 @@ export const IndexPageTemplate = ({
 									</div>
 								</div>
 
-								<Features gridItems={blurbs} />
+								<Features gridItems={intro.blurbs} />
 
 								<div className='columns'>
 									<div className='column is-12 has-text-centered'>
@@ -198,17 +207,12 @@ export const IndexPageTemplate = ({
 );
 
 IndexPageTemplate.propTypes = {
-	image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-	back: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-	back2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+	// image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 	title: PropTypes.string,
-	heading: PropTypes.string,
-	subheading: PropTypes.string,
 	mainpitch: PropTypes.object,
 	description: PropTypes.string,
-	blurbs: PropTypes.shape({
-		text: PropTypes.string,
-		img: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+	intro: PropTypes.shape({
+		blurbs: PropTypes.array,
 	}),
 };
 
@@ -218,14 +222,11 @@ const IndexPage = ({ data }) => {
 	return (
 		<Layout>
 			<IndexPageTemplate
-				image={frontmatter.image}
-				back={frontmatter.back}
-				back2={frontmatter.back2}
+				// image={frontmatter.image}
 				title={frontmatter.title}
-				heading={frontmatter.heading}
 				mainpitch={frontmatter.mainpitch}
 				description={frontmatter.description}
-				blurbs={frontmatter.blurbs}
+				intro={frontmatter.intro}
 			/>
 		</Layout>
 	);
@@ -246,46 +247,23 @@ export const pageQuery = graphql`
 		markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
 			frontmatter {
 				title
-				image {
-					childImageSharp {
-						fluid(maxWidth: 400, quality: 100) {
-							...GatsbyImageSharpFluid
-						}
-					}
-				}
-				heading
-				back {
-					childImageSharp {
-						fluid(maxWidth: 3000, quality: 100) {
-							...GatsbyImageSharpFluid
-						}
-					}
-				}
-				back2 {
-					childImageSharp {
-						fluid(maxWidth: 3000, quality: 100) {
-							...GatsbyImageSharpFluid
-						}
-					}
-				}
 				mainpitch {
 					title
 					description
 				}
 				description
-				blurbs {
-					img {
-						alt
+				intro {
+					blurbs {
 						image {
 							childImageSharp {
-								fluid(maxWidth: 100, quality: 64) {
+								fluid(maxWidth: 240, quality: 64) {
 									...GatsbyImageSharpFluid
 								}
 							}
 						}
+						text
+						url
 					}
-					text
-					url
 				}
 			}
 		}

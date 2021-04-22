@@ -14,10 +14,7 @@ export const ProductPageTemplate = ({
 	title,
 	heading,
 	description,
-	blurbs,
-	main,
-	testimonials,
-	anlage,
+	intro,
 	slogan,
 }) => (
 	<div className='content'>
@@ -48,7 +45,6 @@ export const ProductPageTemplate = ({
 		</div>
 		<section
 			className='section section--gradient'
-			className='section'
 			style={{
 				padding: "5% 2% 25% 2%",
 				backgroundImage: `url(${back})`,
@@ -103,7 +99,7 @@ export const ProductPageTemplate = ({
 				</p>
 				<div className='columns'>
 					<div className='column is-10 is-offset-1'>
-						<Features gridItems={blurbs} />
+						<Features gridItems={intro.blurbs} />
 					</div>
 				</div>
 			</div>
@@ -116,18 +112,8 @@ ProductPageTemplate.propTypes = {
 	heading: PropTypes.string,
 	slogan: PropTypes.string,
 	description: PropTypes.string,
-	blurbs: PropTypes.shape({
-		text: PropTypes.string,
-		img: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-	}),
-	main: PropTypes.shape({
-		heading: PropTypes.string,
-		description: PropTypes.string,
-	}),
-	pricing: PropTypes.shape({
-		heading: PropTypes.string,
-		description: PropTypes.string,
-		plans: PropTypes.array,
+	intro: PropTypes.shape({
+		blurbs: PropTypes.array,
 	}),
 };
 
@@ -141,8 +127,7 @@ const ProductPage = ({ data }) => {
 				heading={frontmatter.heading}
 				slogan={frontmatter.slogan}
 				description={frontmatter.description}
-				blurbs={frontmatter.blurbs}
-				main={frontmatter.main}
+				intro={frontmatter.intro}
 			/>
 		</Layout>
 	);
@@ -164,22 +149,20 @@ export const productPageQuery = graphql`
 			frontmatter {
 				title
 				heading
-				slogan
 				description
-				blurbs {
-					image {
-						childImageSharp {
-							fluid(maxWidth: 240, quality: 64) {
-								...GatsbyImageSharpFluid
+				slogan
+				intro {
+					blurbs {
+						image {
+							childImageSharp {
+								fluid(maxWidth: 240, quality: 64) {
+									...GatsbyImageSharpFluid
+								}
 							}
 						}
+						text
+						url
 					}
-					text
-					url
-				}
-				main {
-					heading
-					description
 				}
 			}
 		}

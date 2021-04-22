@@ -1,10 +1,6 @@
 ---
 templateKey: index-page
 title: Klima, Lüftung, Sanitär & Heizung
-image: /img/jongleur.png
-back: /img/greenbot.png
-back2: /img/greentop.png
-heading: Klima, Lüftung, Sanitär & Heizung
 mainpitch:
   title: Unsere Leistungen
   description: >
@@ -17,37 +13,28 @@ description: >-
   Für die Planung und Beratung Ihrer Projekte stehen wir Ihnen gerne stets zur Seite und 
   unterstützen Sie Kompetenz.
 
-blurbs:
-  - img:
-      alt: Wassersymbol
-      image: /img/trinkwasser.png
-    text: >
-      Sanitär
-    url: /leistungen/sanitaer
-  - img:
-      alt: Lüftungssymbol
-      image: /img/lueftung.png
-    text: >
-      Lüftung
-    url: /leistungen/lueftung
-  - img:
-      alt: Heizungsymbol
-      image: /img/heizung.png
-    text: >
-      Heizung
-    url: /leistungen/heizung
-  - img:
-      alt: Kältesymbol
-      image: /img/kaelte.png
-    text: >
-      Kälte
-    url: /leistungen/kaelte
-  - img:
-      alt: Klimasymbol
-      image: /img/klima.png
-    text: >
-      Klima
-    url: /leistungen/klima
+intro:
+  blurbs:
+    - image: /img/trinkwasser.png
+      text: >
+        Sanitär
+      url: /leistungen/sanitaer
+    - image: /img/lueftung.png
+      text: >
+        Lüftung
+      url: /leistungen/lueftung
+    - image: /img/heizung.png
+      text: >
+        Heizung
+      url: /leistungen/heizung
+    - image: /img/kaelte.png
+      text: >
+        Kälte
+      url: /leistungen/kaelte
+    - image: /img/klima.png
+      text: >
+        Klima
+      url: /leistungen/klima
 
 main:
   heading: Great coffee with no compromises
