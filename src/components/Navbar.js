@@ -34,11 +34,7 @@ const Navbar = class extends React.Component {
 
 	render() {
 		return (
-			<nav
-				className='navbar is-transparent'
-				role='navigation'
-				aria-label='main-navigation'
-			>
+			<nav className='navbar ' role='navigation' aria-label='main-navigation'>
 				<div className='container' style={{ padding: "0.5em 0" }}>
 					<div className='navbar-brand'>
 						<Link to='/' className='navbar-item' title='Logo'>
@@ -46,9 +42,9 @@ const Navbar = class extends React.Component {
 								src={logo}
 								alt='Berger Haustechnik Logo'
 								style={{
-									width: "auto",
-									height: "200px",
-									padding: "0.5em 0  !important",
+									width: "300px",
+									// maxHeight: "4rem !important",
+									// padding: " 0  !important",
 								}}
 							/>
 						</Link>
@@ -69,7 +65,7 @@ const Navbar = class extends React.Component {
 					>
 						<div className='navbar-end ' aria-label='main navigation' id='navi'>
 							<div className='navbar-item has-dropdown is-hoverable'>
-								<Link className='navbar-link' to='/leistungen'>
+								<Link className='navbar-link' to=''>
 									Zusammenarbeit
 								</Link>
 								<div className='navbar-dropdown is-boxed'>
@@ -83,7 +79,7 @@ const Navbar = class extends React.Component {
 							</div>
 
 							<div className='navbar-item has-dropdown is-hoverable'>
-								<Link className='navbar-link' to='/leistungen'>
+								<Link className='navbar-link' to=''>
 									Leistungen
 								</Link>
 								<div className='navbar-dropdown is-boxed'>

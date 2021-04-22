@@ -24,7 +24,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 					padding: "5% 0 30%",
 				}}
 			>
-				<div className='container' style={{ padding: "0 3%" }}>
+				<div className='container' style={{ padding: "0 4%" }}>
 					<Fade duration={1500}>
 						<h2 className='title is-size-3 has-text-weight-bold is-bold-light'>
 							{title}
@@ -48,7 +48,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 			</div>
 			<Fade bottom duration={1500}>
 				<section className='section'>
-					<div className='container' style={{ padding: "3% 0" }}>
+					<div className='container' style={{ padding: "3% 4%" }}>
 						<h3 className='has-text-left has-text-weight-semibold is-size-3'>
 							Interessiert mit uns zu arbeiten?
 						</h3>

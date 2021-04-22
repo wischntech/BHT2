@@ -37,17 +37,20 @@ export const IndexPageTemplate = ({ title, mainpitch, description, intro }) => (
 				>
 					<Fade top duration={1500}>
 						<h1
-							className='has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen'
+							className='title is-size-2'
 							style={{
 								color: "black",
 
 								padding: "4% 0 10px 0",
+								// lineHeight: "1 !important",
 							}}
 						>
 							{title}
 						</h1>
 
-						<h3 className='subtitle'>{mainpitch.description}</h3>
+						<h3 className='subtitle is-size-5-mobile is-size-4-widescreen'>
+							{mainpitch.description}
+						</h3>
 					</Fade>
 					<Fade right delay={500} duration={1500}>
 						<div
@@ -117,7 +120,6 @@ export const IndexPageTemplate = ({ title, mainpitch, description, intro }) => (
 												style={{
 													paddingTop: "15%",
 													color: "white",
-													//	marginTop: "-35%",
 												}}
 												id='leistun'
 											>

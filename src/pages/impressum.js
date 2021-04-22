@@ -11,6 +11,8 @@ const ImpressumPage = () => (
 				<p>
 					Berger Haustechnik GmbH
 					<br />
+					Mutzschen
+					<br />
 					B&ouml;hlitzer Weg 02
 					<br />
 					04668 Grimma
@@ -19,15 +21,14 @@ const ImpressumPage = () => (
 				<p>
 					Handelsregister: HRB 999999
 					<br />
-					Registergericht: Amtsgericht Musterstadt
+					Registergericht: Amtsgericht Leipzig: HRB 1327
 				</p>
 				<br />
 
 				<h2>Vertreten durch:</h2>
 				<ul>
-					<li>Doris Berger</li>
-					<li>Gerald Berger</li>
 					<li>Thomas Berger</li>
+					<li>Gerald Berger</li>
 				</ul>
 				<br />
 
