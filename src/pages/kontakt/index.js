@@ -86,9 +86,9 @@ export default class Index extends React.Component {
 							}}
 						/>
 						<div className='columns' style={{ paddingTop: "4em" }}>
-							<div className='column'>
+							<div className='column '>
 								<div className='columns is-mobile' style={{ padding: "4em" }}>
-									<div className='column has-text-centered'>
+									<div className='column is-4 has-text-centered'>
 										<div class='dropdown is-hoverable'>
 											<div class='dropdown-trigger'>
 												<button
@@ -218,7 +218,7 @@ export default class Index extends React.Component {
 
 									{/* 2. Spalte  */}
 									<div
-										className='column has-text-centered is-narrow-mobile'
+										className='column is-4 has-text-centered is-narrow-mobile'
 										style={{ alignContent: "center", alignItems: "center" }}
 									>
 										<img
@@ -230,7 +230,7 @@ export default class Index extends React.Component {
 									</div>
 
 									{/* 3. Spalte */}
-									<div className='column has-text-centered'>
+									<div className='column is-4 has-text-centered'>
 										<div class='dropdown is-hoverable'>
 											<div class='dropdown-trigger'>
 												<button

@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import BlogRoll from "../../components/BlogRollKaelte";
 import strich from "../../img/strich/kaeltkli.svg";
 import back from "../../img/icons/wave1.svg";
-import back1 from "../../img/back/industry.jpg";
+import back1 from "../../img/back/industry.png";
 import Fade from "react-reveal/Fade";
 import thumbs from "../../img/back/thumbs.jpg";
 
@@ -92,7 +92,7 @@ export default () => (
 			}}
 		>
 			<section>
-				<div className='container'>
+				<div className='container' style={{ padding: "0 2%" }}>
 					<Fade duration={1500}>
 						<h2>Leistungsarten</h2>
 					</Fade>
@@ -266,7 +266,7 @@ export default () => (
 						>
 							Alle Leistungen
 						</h3>
-						<p style={{ paddingBottom: "1%" }}>
+						<p style={{ paddingBottom: "3%" }}>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
 							facere, distinctio culpa temporibus, dolorum perferendis modi
 							numquam praesentium atque libero, minus repellat in similique

@@ -90,7 +90,7 @@ export default () => (
 			}}
 		>
 			<section>
-				<div className='container'>
+				<div className='container' style={{ padding: "0 2%" }}>
 					<Fade duration={1500}>
 						<h2>Leistungsarten</h2>
 					</Fade>

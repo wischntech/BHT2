@@ -20,6 +20,7 @@ export default () => (
 				backgroundRepeat: "no-repeat",
 				backgroundPosition: `center right`,
 				backgroundSize: "100%",
+				height: "500px",
 				boxShadow: "inset 0px 0px 25px 3px black",
 				position: "relative",
 			}}
@@ -93,7 +94,7 @@ export default () => (
 			}}
 		>
 			<section>
-				<div className='container'>
+				<div className='container' style={{ padding: "0 2%" }}>
 					<Fade duration={1500}>
 						<h2>Leistungsarten</h2>
 					</Fade>
@@ -267,7 +268,7 @@ export default () => (
 						>
 							Alle Leistungen
 						</h3>
-						<p style={{ paddingBottom: "1%" }}>
+						<p style={{ paddingBottom: "3%" }}>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
 							facere, distinctio culpa temporibus, dolorum perferendis modi
 							numquam praesentium atque libero, minus repellat in similique

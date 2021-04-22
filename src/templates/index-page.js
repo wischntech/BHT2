@@ -74,19 +74,20 @@ export const IndexPageTemplate = ({ title, mainpitch, description, intro }) => (
 					// backgroundPosition: `bottom right`,
 					// backgroundPositionX: "75%",
 					// backgroundPositionY: "0%",
-					height: "600px",
+					height: "500px",
 					// backgroundRepeat: "no-repeat",
-					position: "relative",
+					// position: "relative",
 					zIndex: "5",
+					// justifyContent: "right",
 				}}
 			>
 				<img
 					src={strich}
 					style={{
 						width: "auto",
-						height: "80%",
-						marginRight: "10vw",
-						zIndex: "9 !important",
+						height: "450px",
+						marginRight: "10%",
+						// // zIndex: "9 !important",
 						float: "right",
 					}}
 					alt='Zwei Strichmännchen. Eins ist ein sich fragender Kunde, der Hilfe benötigt. Auf der anderen Seite ein Jonglierender Berger, 
