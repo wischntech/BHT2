@@ -55,13 +55,7 @@ const ImpressumPage = () => (
 				<br />
 
 				<h2>Redaktionell Verantwortlicher</h2>
-				<p>
-					Gerald Berger
-					<br />
-					B&ouml;hlitzer Weg 02
-					<br />
-					04668 Grimma
-				</p>
+				<p>Gerald Berger</p>
 				<br />
 
 				<h2>EU-Streitschlichtung</h2>
