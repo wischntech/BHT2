@@ -15,7 +15,6 @@ export default () => (
 			className=''
 			style={{
 				backgroundColor: "#ff6633",
-				padding: "10% 0 20% 0",
 				backgroundImage: `url(${back1})`,
 				backgroundRepeat: "no-repeat",
 				backgroundPosition: `center right`,

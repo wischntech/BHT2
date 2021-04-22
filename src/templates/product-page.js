@@ -22,7 +22,6 @@ export const ProductPageTemplate = ({
 			className='full-width-image-container margin-top-0'
 			style={{
 				backgroundColor: "#c9d75a",
-				// padding: "15%  0",
 				backgroundImage: `url(${back1})`,
 				backgroundRepeat: "no-repeat",
 				backgroundPosition: `center right`,

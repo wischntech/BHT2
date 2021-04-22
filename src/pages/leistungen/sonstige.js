@@ -4,7 +4,6 @@ import { Link } from "gatsby";
 import back from "../../img/icons/wave1.svg";
 import back1 from "../../img/back/heat.jpg";
 import Fade from "react-reveal/Fade";
-
 import thumbs from "../../img/back/thumbs.jpg";
 
 export default () => (
@@ -13,7 +12,6 @@ export default () => (
 			className=''
 			style={{
 				backgroundColor: "#c9d75a",
-				padding: "10% 0 20% 0",
 				backgroundImage: `url(${back1})`,
 				backgroundRepeat: "no-repeat",
 				backgroundPosition: `center right`,

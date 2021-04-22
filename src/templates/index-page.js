@@ -57,7 +57,7 @@ export const IndexPageTemplate = ({ title, mainpitch, description, intro }) => (
 							className='column is-12 has-text-centered'
 							style={{ margin: "0% 0 0 0" }}
 						>
-							<Link className='btn bl is-clickable' to='/leistungen'>
+							<Link className='btn bl is-clickable' to='#leistun'>
 								Erfahren Sie mehr.
 							</Link>
 						</div>
@@ -107,38 +107,45 @@ export const IndexPageTemplate = ({ title, mainpitch, description, intro }) => (
 		>
 			<div className='container '>
 				<div className='section'>
-					<div className='columns'>
+					{/* <div className='columns'>
 						<div
 							className='column is-10 is-offset-1'
 							style={{ color: "white" }}
-						>
-							<div className='content'>
-								<div className='content'>
-									<div className='tile margin-4'>
-										<Fade top duration={1500}>
-											<h2
-												className='has-text-weight-semibold is-size-2'
-												style={{
-													paddingTop: "15%",
-													color: "white",
-												}}
-												id='leistun'
-											>
-												{mainpitch.title}
-											</h2>
-										</Fade>
-									</div>
-								</div>
-
-								<Features gridItems={intro.blurbs} />
-
-								<div className='columns'>
-									<div className='column is-12 has-text-centered'>
-										<p>{description}</p>
-									</div>
-								</div>
+						> */}
+					<div className='content'>
+						<div className='content'>
+							<div className='tile margin-4'>
+								<Fade top duration={1500}>
+									<h2
+										className='has-text-weight-semibold is-size-2'
+										style={{
+											paddingTop: "15%",
+											color: "white",
+										}}
+										id='leistun'
+									>
+										{mainpitch.title}
+									</h2>
+								</Fade>
 							</div>
 						</div>
+
+						<Features gridItems={intro.blurbs} />
+
+						{/* <div className='columns'>
+									<div className='column is-12 has-text-centered'> */}
+						<p
+							style={{
+								textAlign: "center",
+								color: "white",
+							}}
+						>
+							{description}
+						</p>
+						{/* </div>
+								</div>
+							</div>
+						</div> */}
 					</div>
 				</div>
 			</div>{" "}
