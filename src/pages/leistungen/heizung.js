@@ -3,7 +3,6 @@ import Layout from "../../components/Layout";
 import { Link } from "gatsby";
 import BlogRoll from "../../components/BlogRollHeizung";
 import strich from "../../img/strich/heizung.svg";
-
 import back from "../../img/icons/wave1.svg";
 import back1 from "../../img/back/heat.jpg";
 import thumbs from "../../img/back/thumbs.jpg";
@@ -19,7 +18,7 @@ export default () => (
 				backgroundRepeat: "no-repeat",
 				backgroundPosition: `center right`,
 				backgroundSize: "100%",
-				height: "500px",
+				height: "300px",
 				boxShadow: "inset 0px 0px 25px 3px black",
 				position: "relative",
 			}}

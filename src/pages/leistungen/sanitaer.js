@@ -18,6 +18,7 @@ export default () => (
 				backgroundRepeat: "no-repeat",
 				backgroundPosition: `center right`,
 				backgroundSize: "100%",
+				height: "300px",
 				boxShadow: "inset 0px 0px 25px 3px black",
 				position: "relative",
 			}}

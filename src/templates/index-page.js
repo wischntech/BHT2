@@ -160,7 +160,7 @@ export const IndexPageTemplate = ({ title, mainpitch, description, intro }) => (
 		<div
 			style={{
 				position: "relative",
-
+				padding: "10%",
 				backgroundImage: `url(${wave2})`,
 				backgroundPosition: `top right`,
 				backgroundSize: "100%",
